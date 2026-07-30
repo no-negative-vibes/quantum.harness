@@ -5,7 +5,55 @@
 寻找新的、可映射回具体量子模型的矩阵结构，使辅助场量子蒙卡的每个构型权重
 `det(I + exp(A_1) ... exp(A_L))` 始终非负；或者用精确反例排除一个看似可行的候选。
 
-## 现在做到哪里
+要一次看完全部尝试、矩阵构造、Hamiltonian、失败路线和最新结论，直接阅读
+[项目完整总结](docs/PROJECT_MASTER_SUMMARY.zh-CN.md)。它是当前唯一自包含总报告。
+
+## 当前结论
+
+先看 [成果总账](docs/RESULTS_LEDGER.md)。截至 2026-07-30：
+
+- 五套具体 determinant 恒正构造和一套 graded 正权机制已经严格证明；
+- 五组局域相互作用 Hamiltonian 已完成映射，但尚无一组能确认是新的无符号物理类；
+- graded monomial 已约化到已知 Majorana 正性，odd block-TN 的自然局域化有精确负权；
+- tensor-square 四模式模型约化到 split `O(2,2)`，一般提升有条带非局域障碍；
+- 第一版 gauge/cocycle 能精确消号，但会形成随系统增长的 Wilson string；
+- ZiboJin 的独立 exterior-cone 分支把 oddcycle seeds `117/132/147` 分别精确推进到
+  全部 depth-27 words，并完成 448 个长度 60–1800 的对抗重放；它们仍是有限深度候选；
+- 另一套 symmetric-oddcycle 连续字母表已经有任意深度严格定理和五模相互作用
+  transfer，但最新 exact common-metric 证书又把整个区间归入已知
+  Wei 不定度量收缩半群（signature `(1,4)`），所以它是完整的已知类实例，不是新机制；
+- ZiboJin 已把早期 untyped joint-alphabet 有限深度候选推进成一个完整的
+  **coherently oriented Lorentz path-metric** 机制：五维四字母表
+  `{B(1/1000),B(1/1000)^T,B(4/5),B(4/5)^T}` 有 exact rational 四状态证书，
+  严格保证任意 word 的 `det(I+W)>0`；另有 exact dual 排除共同严格 quadratic
+  split metric，Nambu 审计又排除任意固定复正交 Majorana 基下的 Wei
+  `J1/J2` 充分条件。它是目前最强的新矩阵机制候选，但不能排除未知 nonquadratic
+  common cone 或其他未来机制；
+- 第一批已经得到一个通用 Hermitian 半群模型工厂和八种严格/精确可约化模型；
+  后续排查已把 adjoint lift 归入已知 split-orthogonal 类，并证明 grade-charge
+  full trace 只是静态 ancilla 扇区直和。
+- Tensor-square 相图已完成 675/675 粗扫和 Stage 4 密集统计审计。低温自相关使
+  严格 endpoint 网格不完整，两个全局更新器也按预注册门提前停止；最终
+  `SURVIVE=0, EXTEND=0, STOP=21` 是统计停止而非物理 no-go，Stage 5 未释放，
+  没有新相声明。该相图线由 ZiboJin 的独立分支推进。
+- 籼至已完成第一轮真正多状态的 typed exterior 正锥范畴搜索：24/24 个格点、
+  2,400 个已知控制和 2,400 个探索候选全部完成。探索组只有一个对象同时得到任意深度
+  合法正性证书和精确 type-erasure 负权 `-10`，但完整四维排重证明它只是
+  signed-permutation TN coboundary；当前前门新候选和物理强候选均为零。这只关闭
+  `support_aware_sparse-v1` 语法，不关闭整个 typed exterior 方向。
+- 单向 Stark 链的 Hermitian partner 不唯一：同一非厄米链既可对应对角模型，也可经
+  任意 unitary 换基写成长程模型，所以它只保留为方法校准。
+- Lorentz path-metric 同一字母表还给出五值正辅助场分解和真实 Hermitian、数守恒、
+  genuinely interacting 五模 Hamiltonian；这是新的 grand-canonical cluster
+  构造候选，但尚未给出局域热力学族或固定填充正性。
+- 按本项目严格 L3 口径，**确认的新局域无符号物理类仍为零**；但新的矩阵充分机制
+  已有一项高质量 publication candidate。完整结论与贡献归属见
+  [项目完整总结](docs/PROJECT_MASTER_SUMMARY.zh-CN.md)。
+
+下面的长清单用于审计数字，日常不需要逐条阅读。
+
+<details>
+<summary>展开完整扫描与证明快照</summary>
 
 - 已完成题目拆解、主要已知定理和新颖性边界的调研。
 - determinant oracle、Majorana 直接 Fock/Spin 迹 oracle、25 个基线结构生成器、可恢复参数
@@ -57,10 +105,42 @@
   在 canonical `J1/J2` 与当前 Jordan-Wigner 取向下，猜想
   `pi_*=(-1)^[m(m+1)/2]` 指定的扇区在 `m=2..6` 零失败，互补扇区每个维数都观察到
   数值负权；这是 convention-dependent ensemble-level 猜想，不是已完成定理。
+- 已证明一个 pure-TN 之外的 graded-monomial crossing 恒等式：
+  `sgn(P) det(I+P D)>=0`（`D_ii>=1`），并构造了奇环上的吸引 spinless-fermion
+  Hamiltonian、逐历史正权和 real-exponential grade ancilla。
+- 随后的已知类排重给出明确降级：`r=1` 顶点精确等于 `su(1|1)` graded
+  permutation；`r>1` Hamiltonian 的 centered 一体 kernel 逐边负半定、密度作用全为
+  吸引，因而严格包含在 2016 Majorana reflection positivity 类中。它是有用的矩阵
+  表述和特殊 CT 分解，不是新的无符号 Hamiltonian 类。进一步文献核对还确认，所用
+  cycle factor 是已知 monomial 特征多项式分解的直接推论，因此矩阵端也不主张新定理。
+- 对旧的 odd block-TN 候选完成最关键的局域闭环：两个格点、三个 flavor 上，
+  independent local `C3` routes 与 flavor-preserving 对称正定 TN hopping 各自都是
+  实指数时间片，但两层精确满足 `det(I+XR)=-2`。固定全局分块定理仍正确；自然局域
+  Hamiltonian 推广已关闭。
+- 当前 typed-exterior 工作分支完整自动测试为 `408 passed`。ZiboJin 的最终
+  Lorentz path-metric 结果包提供 exact archival replay、聚焦 clean replay
+  `4 passed` 和 payload hashes；最新协作提交 `985a55c` 又完成 exact word-pair
+  dictionary/enumerator，为同一字母表的局域 Hamiltonian/HS 搜索准备字典。
+  Tensor-square phase
+  已推进到 `3ee7905`：675/675 个 Stage 3 cells 与 180/180 个 Stage 4 pilot
+  replicas 完成，最终按预注册统计门停止。
 - 主办方候选仍未全部完成：TN 的文献史排重、超出普通一维开链的新 Hamiltonian、完整
   复 Majorana/BdG/Pfaffian 表述、比 TN 更大的半群仍开放。
 
+</details>
+
 ## 阅读顺序
+
+日常只需：
+
+1. [项目完整总结](docs/PROJECT_MASTER_SUMMARY.zh-CN.md)：全部尝试、矩阵、模型和结论；
+2. [成果总账](docs/RESULTS_LEDGER.md)：只核对数量和当前状态；
+3. [中文零基础导读](docs/ONBOARDING.zh-CN.md)：补齐术语；
+4. [下一阶段研究计划](docs/NEXT_RESEARCH_PLAN.md)：只看接下来做什么；
+5. 与某个结论有关时，再进入对应专题文档。
+
+<details>
+<summary>展开专题复核索引</summary>
 
 1. [中文零基础导读](docs/ONBOARDING.zh-CN.md)：先理解问题、术语和我们为什么这样做。
 2. [全非负路径类](docs/TOTAL_NONNEGATIVE_PATH_CLASS.md)：看当前严格恒正主候选、三步证明和
@@ -77,18 +157,28 @@
    为什么零失败者仍只是已知机制。
 8. [激进候选首批结果](docs/SPECULATIVE_STRUCTURE_RESULTS.md)：看奇数阶 monomial 的一般
    证明、四类 80 位反例和 Majorana 宇称猜想。
-9. [激进候选清单](docs/SPECULATIVE_CANDIDATE_BATCH.md)：看已占位的下一批
+9. [graded monomial 排重结果](docs/GRADED_MONOMIAL_RESULTS.md)：看 crossing
+   cycle 定理、奇环模型，以及为什么它最终属于已知 Majorana 正性类。
+10. [odd block-TN 局域闭环](docs/ODD_BLOCK_TN_LOCALITY_AUDIT.md)：看固定分块
+   定理为何不能无代价局域化，以及两层整数反例。
+11. [gauge/cocycle 第一轮](docs/GAUGE_COCYCLE_RESULTS.md)：看四/六模式精确消号和
+   `2 x L` Wilson-string 局域性障碍。
+12. [typed exterior 第一轮](docs/TYPED_EXTERIOR_PILOT_RESULTS.md)：看 2,400 个探索
+   候选的 exact 漏斗、唯一 `-10` 假阳性和 signed-permutation TN 排重。
+13. [激进候选清单](docs/SPECULATIVE_CANDIDATE_BATCH.md)：看已占位的下一批
    spinor/exterior-cone 方向。
-10. [任意小夹角解析反例](docs/SMALL_ANGLE_COUNTEREXAMPLE.md)：看 Majorana 双锥的独立反例。
-11. [Majorana 双锥结果](docs/MAJORANA_CONE_RESULTS.md)：看直接 Spin 迹、精确负分支和完整证据。
-12. [主办方方向完成度](docs/ORGANIZER_DIRECTION_AUDIT.md)：区分已关闭、第一轮完成和仍开放。
-13. [`U(p,q)` 相位结论](docs/PSEUDOUNITARY_PHASE_RESULTS.md)：看连续相位为何可解但仍有负号。
-14. [下一阶段研究计划](docs/NEXT_RESEARCH_PLAN.md)：看主线、交付、停止条件和两人分工。
-15. [AZ 十类结果](docs/AZ_TENFOLD_RESULTS.md)：看符号表、精确证书和约化结论。
-16. [经典群基线](docs/BASELINE_RESULTS.md)：看已经排除了什么、什么只是复现已知结果。
-17. [项目定性与算力策略](docs/COMPUTE_STRATEGY.md)：判断何时本地跑、何时值得上超算。
-18. [2026 文献与空白](docs/LITERATURE_GAP_2026.md)：决定值得继续攻的研究缝隙。
-19. [研究地基](docs/FOUNDATIONS.md)：需要公式、文献、精确证书或候选方向时再查。
+14. [任意小夹角解析反例](docs/SMALL_ANGLE_COUNTEREXAMPLE.md)：看 Majorana 双锥的独立反例。
+15. [Majorana 双锥结果](docs/MAJORANA_CONE_RESULTS.md)：看直接 Spin 迹、精确负分支和完整证据。
+16. [主办方方向完成度](docs/ORGANIZER_DIRECTION_AUDIT.md)：区分已关闭、第一轮完成和仍开放。
+17. [`U(p,q)` 相位结论](docs/PSEUDOUNITARY_PHASE_RESULTS.md)：看连续相位为何可解但仍有负号。
+18. [下一阶段研究计划](docs/NEXT_RESEARCH_PLAN.md)：看主线、交付、停止条件和两人分工。
+19. [AZ 十类结果](docs/AZ_TENFOLD_RESULTS.md)：看符号表、精确证书和约化结论。
+20. [经典群基线](docs/BASELINE_RESULTS.md)：看已经排除了什么、什么只是复现已知结果。
+21. [项目定性与算力策略](docs/COMPUTE_STRATEGY.md)：判断何时本地跑、何时值得上超算。
+22. [2026 文献与空白](docs/LITERATURE_GAP_2026.md)：决定值得继续攻的研究缝隙。
+23. [研究地基](docs/FOUNDATIONS.md)：需要公式、文献、精确证书或候选方向时再查。
+
+</details>
 
 不需要阅读 `quantum.harness` 的其他 track、skill 或主办方开发文件。
 
@@ -118,14 +208,38 @@ cd /home/volper/harness_quantum/signfree-qmc
 
 ## 下一步
 
-外围宽扫和第一批激进结构筛选已完成，不需要重复。现在做三件事：
+外围宽扫和第一批激进结构筛选已完成，不需要重复。现在按以下收尾和开工顺序推进：
 
-1. 为 odd monomial / block-TN 的离散 grade 寻找局域、可采样的 HS 来源并完整排重
-   `P0`/generalized-permutation 文献；
-2. 从 Majorana reflection-positivity 证明中推导或推翻
-   `pi_*=(-1)^[m(m+1)/2]` 的受保护宇称；
-3. 若两条都不能物理闭环，再攻击 spinor-Metzler、非诱导 exterior-cone 或真正改变
-   Hilbert 空间的 gauge/ancilla 编码。
+1. graded monomial、odd block-TN 和 R01 fixed Klein-Hodge 都转为已知类或
+   exact no-go 回归，不再作为新物理主线；
+2. 六模式 Fock–CP 的 13 个 depth-2 Klein 电路首轮已完成，520 个单元都没有
+   Hermiticity-preserving bridge；一般 non-Klein Choi 锥仍开放；
+3. tensor-square 已得到四模式局域 HS，但该模型属于 split `O(2,2)`；一般维数的
+   直接提升又产生非局域行列条带；
+4. edge-electric gauge/cocycle 在四/六模式上精确消号，但扩展后产生 system-size
+   Wilson string；该对象现在作为允许的非常规模型来源，而不是立即淘汰；
+5. Majorana 宇称 period-4 猜想作为独立支线继续，不阻塞新机制搜索。
+6. 非常规模型第一批和三个候选的首轮排重已经完成：adjoint lift 归入已知 split 类，
+   grade-charge 降为静态扇区直和；tensor-square 的 ED/DQMC 相图线由 ZiboJin
+   继续推进，本分支不做重复扫描。
+7. typed exterior 第一轮已经完成：无条件稀疏生成的 2,400 个探索候选没有留下
+   前门新候选，唯一精确命中被 signed-permutation TN 排重。下一轮改为按 grade-chart
+   约束条件化生成，并在生成器层先商掉已知 coboundary；同时以小预算并行搜索含真实
+   pairing 的 Pfaffian/Spin 正性。结果见
+   [typed exterior 第一轮](docs/TYPED_EXTERIOR_PILOT_RESULTS.md)，设计见
+   [搜索规格](../../../../docs/superpowers/specs/2026-07-29-exterior-positive-category-search-design.md)。
 
-TN 一维构造和 odd monomial 都已经是严格矩阵机制；只有得到自然局域 Hamiltonian/HS
-映射后，才升级为新的物理无符号类。
+TN 一维构造和 graded monomial 都是严格矩阵机制；前者物理上仍是一维已知模型，
+后者已明确约化到 Majorana reflection positivity。后续候选必须同时通过数学证明、
+物理映射和已知类排重，才升级为新的物理无符号类。
+
+本轮候选定义、严格恒等式、已知反例和停止条件见
+[自底向上正性候选](docs/BOTTOM_UP_POSITIVITY_CANDIDATES.md)。
+Fock–CP 第一批 520 个线性系统见
+[六模式 Fock–CP 首轮结果](docs/FOCK_CP_SCREEN_RESULTS.md)。
+Tensor-square 的严格定理、四模式 HS、split 约化和局域性障碍见
+[tensor-square 结果](docs/TENSOR_SQUARE_RESULTS.md)。
+Gauge/cocycle 的精确 GF(2) 解和 Wilson-string 障碍见
+[gauge/cocycle 第一轮结果](docs/GAUGE_COCYCLE_RESULTS.md)。
+放宽短程、局域和 Hermitian 限制后的新主线见
+[非常规模型发现](docs/UNCONVENTIONAL_MODEL_DISCOVERY.md)。

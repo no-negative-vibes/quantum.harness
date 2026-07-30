@@ -1,0 +1,15 @@
+{
+  "protocol": "exterior-positive-category-v1-pilot",
+  "manifest_schema": "exterior-category-pilot-cell-v1",
+  "design": "docs/superpowers/specs/2026-07-29-exterior-positive-category-search-design.md",
+  "implementation_plan": "docs/superpowers/plans/2026-07-29-typed-exterior-pilot-implementation.md",
+  "implementation_base_commit": "17a75a6",
+  "implementation_sha256": {
+    "oracle/exterior_category_pilot.py": "4f1fe561f9afd79a5f3b986c88ead9874f4649db6090a9ea07c84c3830c496b6",
+    "oracle/exterior_category_search.py": "0fa6d78d5f221e3142d5b275de95cf03f00e6b7ea263f6f129db6be233d8644d",
+    "oracle/known_class_filters.py": "fc32996282f6915a884d221cb1326ad400fb4b9f4ecef49511adb9f21661dacb"
+  },
+  "purpose": "exact typed exterior-chart search with type-erasure counterexamples",
+  "claim_limit": "finite typed graphs always embed in known constrained-switching frameworks; only exact rational charts prove arbitrary-depth legal-path positivity, and no candidate is physically strong until primitive real-log and broader known-class filters pass",
+  "collaborator_boundary": "does not scan ZiboJin untyped oddcycle alphabets, exterior CQLF/coupled-tail certificates, or tensor-square phase diagrams"
+}
