@@ -1,0 +1,16 @@
+{
+  "candidates_per_cell": 200,
+  "max_word_depth": 5,
+  "max_exact_witnesses_per_candidate": 1,
+  "weight_tolerance": 1e-10,
+  "chart_tolerance": 1e-10,
+  "legal_stress_depths": [2, 4, 8, 16, 32],
+  "legal_stress_candidates_per_cell": 1,
+  "legal_stress_words_per_depth": 4,
+  "signed_permutation_max_assignments": 1000,
+  "coefficient_alphabet": ["-2", "-1", "1", "2"],
+  "positive_diagonal_alphabet": ["1", "2"],
+  "product_order": "B_last ... B_first",
+  "exact_certificate_backend": "sympy-rational",
+  "float_backend_role": "screen-only"
+}

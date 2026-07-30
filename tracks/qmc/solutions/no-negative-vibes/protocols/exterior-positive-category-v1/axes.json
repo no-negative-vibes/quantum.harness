@@ -1,0 +1,8 @@
+{
+  "grammar": [
+    "coboundary_tn_control",
+    "support_aware_sparse"
+  ],
+  "dimension": [4, 5, 6],
+  "seed": [14, 77, 2026072901, 2026072902]
+}

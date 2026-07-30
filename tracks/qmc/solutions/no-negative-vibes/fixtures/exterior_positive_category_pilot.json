@@ -1,0 +1,492 @@
+{
+  "by_grammar_dimension": [
+    {
+      "cells": 4,
+      "counts": {
+        "ambiguous": 170,
+        "ambiguous_checks": 11327,
+        "candidates": 800,
+        "certificate_stage_checks": 1600,
+        "determinant_checks": 71467,
+        "edge_grade_checks": 12000,
+        "exact_replays": 11940,
+        "exact_witnesses": 613,
+        "known_class_filter_incomplete": 0,
+        "legal_stress_word_checks": 80,
+        "no_chart": 0,
+        "physical_strong_candidate": 0,
+        "provisional_front_door_survivor": 0,
+        "signed_permutation_tn_reduction": 0,
+        "typed_only_calibration": 613,
+        "untyped_not_separated": 17
+      },
+      "dimension": 4,
+      "exact_negative_witness_depths": {
+        "1": 384,
+        "2": 38,
+        "3": 168,
+        "4": 5,
+        "5": 18
+      },
+      "grammar": "coboundary_tn_control"
+    },
+    {
+      "cells": 4,
+      "counts": {
+        "ambiguous": 200,
+        "ambiguous_checks": 13359,
+        "candidates": 800,
+        "certificate_stage_checks": 1600,
+        "determinant_checks": 83196,
+        "edge_grade_checks": 14400,
+        "exact_replays": 13943,
+        "exact_witnesses": 584,
+        "known_class_filter_incomplete": 0,
+        "legal_stress_word_checks": 80,
+        "no_chart": 0,
+        "physical_strong_candidate": 0,
+        "provisional_front_door_survivor": 0,
+        "signed_permutation_tn_reduction": 0,
+        "typed_only_calibration": 584,
+        "untyped_not_separated": 16
+      },
+      "dimension": 5,
+      "exact_negative_witness_depths": {
+        "1": 347,
+        "2": 18,
+        "3": 187,
+        "4": 3,
+        "5": 29
+      },
+      "grammar": "coboundary_tn_control"
+    },
+    {
+      "cells": 4,
+      "counts": {
+        "ambiguous": 233,
+        "ambiguous_checks": 18119,
+        "candidates": 800,
+        "certificate_stage_checks": 1600,
+        "determinant_checks": 91655,
+        "edge_grade_checks": 16800,
+        "exact_replays": 18676,
+        "exact_witnesses": 557,
+        "known_class_filter_incomplete": 0,
+        "legal_stress_word_checks": 80,
+        "no_chart": 0,
+        "physical_strong_candidate": 0,
+        "provisional_front_door_survivor": 0,
+        "signed_permutation_tn_reduction": 0,
+        "typed_only_calibration": 557,
+        "untyped_not_separated": 10
+      },
+      "dimension": 6,
+      "exact_negative_witness_depths": {
+        "1": 282,
+        "2": 26,
+        "3": 231,
+        "5": 18
+      },
+      "grammar": "coboundary_tn_control"
+    },
+    {
+      "cells": 4,
+      "counts": {
+        "ambiguous": 0,
+        "ambiguous_checks": 17,
+        "candidates": 800,
+        "certificate_stage_checks": 813,
+        "determinant_checks": 4331,
+        "edge_grade_checks": 12000,
+        "exact_replays": 18,
+        "exact_witnesses": 1,
+        "known_class_filter_incomplete": 0,
+        "legal_stress_word_checks": 80,
+        "no_chart": 787,
+        "physical_strong_candidate": 0,
+        "provisional_front_door_survivor": 0,
+        "signed_permutation_tn_reduction": 1,
+        "typed_only_calibration": 0,
+        "untyped_not_separated": 12
+      },
+      "dimension": 4,
+      "exact_negative_witness_depths": {
+        "5": 1
+      },
+      "grammar": "support_aware_sparse"
+    },
+    {
+      "cells": 4,
+      "counts": {
+        "ambiguous": 0,
+        "ambiguous_checks": 0,
+        "candidates": 800,
+        "certificate_stage_checks": 809,
+        "determinant_checks": 3159,
+        "edge_grade_checks": 14400,
+        "exact_replays": 0,
+        "exact_witnesses": 0,
+        "known_class_filter_incomplete": 0,
+        "legal_stress_word_checks": 80,
+        "no_chart": 791,
+        "physical_strong_candidate": 0,
+        "provisional_front_door_survivor": 0,
+        "signed_permutation_tn_reduction": 0,
+        "typed_only_calibration": 0,
+        "untyped_not_separated": 9
+      },
+      "dimension": 5,
+      "exact_negative_witness_depths": {},
+      "grammar": "support_aware_sparse"
+    },
+    {
+      "cells": 4,
+      "counts": {
+        "ambiguous": 0,
+        "ambiguous_checks": 0,
+        "candidates": 800,
+        "certificate_stage_checks": 811,
+        "determinant_checks": 3861,
+        "edge_grade_checks": 16800,
+        "exact_replays": 0,
+        "exact_witnesses": 0,
+        "known_class_filter_incomplete": 0,
+        "legal_stress_word_checks": 80,
+        "no_chart": 789,
+        "physical_strong_candidate": 0,
+        "provisional_front_door_survivor": 0,
+        "signed_permutation_tn_reduction": 0,
+        "typed_only_calibration": 0,
+        "untyped_not_separated": 11
+      },
+      "dimension": 6,
+      "exact_negative_witness_depths": {},
+      "grammar": "support_aware_sparse"
+    }
+  ],
+  "exact_negative_witness_depths": {
+    "1": 1013,
+    "2": 82,
+    "3": 586,
+    "4": 8,
+    "5": 66
+  },
+  "report_schema": "exterior-category-pilot-report-v1",
+  "run": {
+    "provenance": {
+      "claim_limit": "finite typed graphs always embed in known constrained-switching frameworks; only exact rational charts prove arbitrary-depth legal-path positivity, and no candidate is physically strong until primitive real-log and broader known-class filters pass",
+      "collaborator_boundary": "does not scan ZiboJin untyped oddcycle alphabets, exterior CQLF/coupled-tail certificates, or tensor-square phase diagrams",
+      "design": "docs/superpowers/specs/2026-07-29-exterior-positive-category-search-design.md",
+      "implementation_base_commit": "17a75a6",
+      "implementation_plan": "docs/superpowers/plans/2026-07-29-typed-exterior-pilot-implementation.md",
+      "implementation_sha256": {
+        "oracle/exterior_category_pilot.py": "4f1fe561f9afd79a5f3b986c88ead9874f4649db6090a9ea07c84c3830c496b6",
+        "oracle/exterior_category_search.py": "0fa6d78d5f221e3142d5b275de95cf03f00e6b7ea263f6f129db6be233d8644d",
+        "oracle/known_class_filters.py": "fc32996282f6915a884d221cb1326ad400fb4b9f4ecef49511adb9f21661dacb"
+      },
+      "manifest_schema": "exterior-category-pilot-cell-v1",
+      "protocol": "exterior-positive-category-v1-pilot",
+      "purpose": "exact typed exterior-chart search with type-erasure counterexamples"
+    },
+    "run_id": "exterior-positive-category-v1-pilot",
+    "settings": {
+      "candidates_per_cell": 200,
+      "chart_tolerance": 1e-10,
+      "coefficient_alphabet": [
+        "-2",
+        "-1",
+        "1",
+        "2"
+      ],
+      "exact_certificate_backend": "sympy-rational",
+      "float_backend_role": "screen-only",
+      "legal_stress_candidates_per_cell": 1,
+      "legal_stress_depths": [
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "legal_stress_words_per_depth": 4,
+      "max_exact_witnesses_per_candidate": 1,
+      "max_word_depth": 5,
+      "positive_diagonal_alphabet": [
+        "1",
+        "2"
+      ],
+      "product_order": "B_last ... B_first",
+      "signed_permutation_max_assignments": 1000,
+      "weight_tolerance": 1e-10
+    },
+    "spec_digest": "329894802a07249a79de6b2fa7a7bcf694476e3582b95a5e2f6e0d5856df6f25",
+    "verified_cells": 24
+  },
+  "schema_version": 1,
+  "support_aware_signed_permutation_reductions": [
+    {
+      "candidate_id": "15526eb4720007ec3271d9c268589f86aef2143b351cf8b36b65a5fc23acda80",
+      "candidate_seed": 15103403883834912679,
+      "cell_id": "cell-0013",
+      "definition": {
+        "dimension": 4,
+        "edges": [
+          {
+            "even_permutation": [
+              3,
+              0,
+              2,
+              1
+            ],
+            "factor_order": [
+              "even_permutation",
+              "positive_diagonal",
+              "integer_shears"
+            ],
+            "matrix": [
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ]
+            ],
+            "name": "forward-1",
+            "positive_diagonal": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "shears": [
+              {
+                "coefficient": 2,
+                "column": 0,
+                "row": 2
+              }
+            ],
+            "source": "a",
+            "target": "b"
+          },
+          {
+            "even_permutation": [
+              3,
+              0,
+              2,
+              1
+            ],
+            "factor_order": [
+              "even_permutation",
+              "positive_diagonal",
+              "integer_shears"
+            ],
+            "matrix": [
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                -2,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ]
+            ],
+            "name": "forward-2",
+            "positive_diagonal": [
+              1,
+              1,
+              2,
+              1
+            ],
+            "shears": [
+              {
+                "coefficient": -2,
+                "column": 3,
+                "row": 1
+              }
+            ],
+            "source": "a",
+            "target": "b"
+          },
+          {
+            "even_permutation": [
+              1,
+              3,
+              2,
+              0
+            ],
+            "factor_order": [
+              "even_permutation",
+              "positive_diagonal",
+              "integer_shears"
+            ],
+            "matrix": [
+              [
+                -1,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ]
+            ],
+            "name": "return",
+            "positive_diagonal": [
+              1,
+              1,
+              1,
+              2
+            ],
+            "shears": [
+              {
+                "coefficient": -1,
+                "column": 1,
+                "row": 0
+              }
+            ],
+            "source": "b",
+            "target": "a"
+          }
+        ],
+        "grammar": "support_aware_sparse",
+        "seed": 15103403883834912679
+      },
+      "dimension": 4,
+      "evidence": {
+        "exact_negative_witnesses": [
+          {
+            "depth": 5,
+            "exact_weight": "-10",
+            "float_weight": -9.999999999999998,
+            "primitive_real_log_impossible_by_negative_singleton": false,
+            "product_order": "B_last ... B_first",
+            "word": [
+              "forward-1",
+              "forward-1",
+              "forward-2",
+              "forward-1",
+              "forward-2"
+            ]
+          }
+        ],
+        "has_exact_grade_chart": true,
+        "induced_by_diagonal_sign_charts": false,
+        "legal_closed_witness": {
+          "exact_weight": "24",
+          "grade_traces": [
+            "1",
+            "5",
+            "9",
+            "7",
+            "2"
+          ],
+          "word": [
+            "forward-1",
+            "return"
+          ]
+        },
+        "legal_stress": [],
+        "minimum_exact_negative_word_depth": 5,
+        "novelty_status": "known_signed_permutation_tn_coboundary",
+        "physical_strong_candidate": false,
+        "primitive_real_log_audit": {
+          "all_edges_pass": false,
+          "reason": "a product-of-elementary-factors is not a single real logarithm",
+          "status": "not_run"
+        },
+        "signed_permutation_filter_complete": true,
+        "signed_permutation_tn_witness": {
+          "object_permutations": {
+            "a": [
+              2,
+              1,
+              0,
+              3
+            ],
+            "b": [
+              2,
+              0,
+              3,
+              1
+            ]
+          },
+          "tested_assignments": 350
+        }
+      },
+      "grammar": "support_aware_sparse"
+    }
+  ],
+  "totals": {
+    "ambiguous": 603,
+    "ambiguous_checks": 42822,
+    "candidates": 4800,
+    "certificate_stage_checks": 7233,
+    "determinant_checks": 257669,
+    "edge_grade_checks": 86400,
+    "exact_replays": 44577,
+    "exact_witnesses": 1755,
+    "known_class_filter_incomplete": 0,
+    "legal_stress_word_checks": 480,
+    "no_chart": 2367,
+    "physical_strong_candidate": 0,
+    "provisional_front_door_survivor": 0,
+    "signed_permutation_tn_reduction": 1,
+    "typed_only_calibration": 1754,
+    "untyped_not_separated": 75
+  },
+  "validation": {
+    "classification_conservation": true,
+    "exact_negative_witnesses": true,
+    "legal_stress_nonnegative": true,
+    "provisional_gate_consistency": true
+  }
+}
