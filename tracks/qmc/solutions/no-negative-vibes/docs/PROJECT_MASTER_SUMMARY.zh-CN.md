@@ -2,7 +2,7 @@
 
 - 更新时间：2026-07-30
 - typed exterior 核心实现基线（籼至）：`17a75a6`
-- ZiboJin exterior 方向结果基线：`58961af`
+- ZiboJin exterior 方向结果基线：`985a55c`
 - ZiboJin tensor-square phase 方向结果基线：`3ee7905`
 - 当前分支：`work/xianzhi/exterior-positive-category-search`
 
@@ -43,7 +43,7 @@ w = det(I + B_L ... B_1)
 - 当前 typed-exterior 工作分支完整自动回归为 `408 passed`；
 - ZiboJin 的独立 exterior-cone 分支已完成 path-metric、physical transfer 和
   Majorana/Wei exact archival replay；最终 focused clean replay 为 `4 passed`，
-  最新 word-operator compiler 另有 TDD 回归；
+  最新 exact word-pair dictionary/enumerator 另有 TDD 回归；
 - ZiboJin 的 tensor-square phase 分支已完成 Stage 4 统计审计并 closeout；
 - 得到五套直接 determinant 恒正具体构造族：
   TN 路径、odd monomial/block-TN、tensor-square、symmetric-oddcycle 连续族、
@@ -169,6 +169,11 @@ mixed-word 穷举和高精度/整数接受门，而不是同一套随机 determi
 `{1/1000,4/5}` 及其转置，并完成 publication-level exact packaging。核心 theorem
 不靠长词枚举：四状态 Lorentz metrics 的 16 个严格 edge gaps 在闭路上 telescope，
 coherent time orientation 固定 determinant 的符号，因此直接覆盖任意深度。
+
+到 `985a55c`，合作者又完成了完整 252 维数守恒 normal-ordered 坐标编译器，以及
+按 transpose 与矩阵重复排重的 exact word-pair ray 枚举器。它把同一套任意深度
+正性字母表的“词”编译成可线性组合的 Hermitian Fock 算符，为下一步用正系数消掉
+非局域/高体项做准备；这仍是基础设施，不是已经找到的新局域模型。
 
 已知类排重也不再停留在“数值没找到共同 metric”。冻结的 positive-definite exact
 dual 给出共同严格 quadratic metric 的 infeasibility；随后 Nambu pullback、秩 24
@@ -784,9 +789,10 @@ Lorentz path metrics 证明任意非空、任意长度的 word 都有 `det(I+W)>
 
 这是一条高质量的新 determinant 充分机制候选，但还没有证明局域性、热力学族、
 固定粒子数扇区正性，或排除所有可能的非二次锥/fermion-bag/loop 解释。因此团队的
-“确认的新局域无符号物理类”计数仍为零。`58961af` 之后的工作正在编译同一字母表的
-exact word operators，准备继续找更自然的局域 Hamiltonian/HS 表述；本分支不重复
-它的证书搜索。
+“确认的新局域无符号物理类”计数仍为零。到 `985a55c`，同一字母表已经有完整
+252 维数守恒 normal-ordered 坐标编译器，以及按 transpose 和矩阵重复排重的 exact
+word-pair ray 枚举器；它是在为局域 Hamiltonian/HS 的正系数消去搜索准备字典，
+还没有交付新的局域模型。本分支不重复它的证书或模型搜索。
 
 ### 支线：复 Majorana/Pfaffian 工具
 
@@ -888,7 +894,8 @@ python -m pytest -q
 
 ZiboJin 的最终四字母表结果包提供了独立 exact archival replay、聚焦 clean replay
 `4 passed` 和机器可核对的 payload hashes；本文没有把它误写成对整个协作分支做过
-完整集成回归。其最新 `58961af` 继续加入 exact word-operator 编译工具。Tensor-square
+完整集成回归。其最新 `985a55c` 又加入 exact word-pair dictionary/enumerator。
+Tensor-square
 分支的各阶段 clean gates 随审计由 60 增长到 73 个专项测试，最终结论还由完整
 Stage 3/4 manifests 和预注册停止门约束；本文同样不把专项门写成整仓测试数。
 

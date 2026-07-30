@@ -119,7 +119,9 @@
   Hamiltonian 推广已关闭。
 - 当前 typed-exterior 工作分支完整自动测试为 `408 passed`。ZiboJin 的最终
   Lorentz path-metric 结果包提供 exact archival replay、聚焦 clean replay
-  `4 passed` 和 payload hashes；最新协作提交为 `58961af`。Tensor-square phase
+  `4 passed` 和 payload hashes；最新协作提交 `985a55c` 又完成 exact word-pair
+  dictionary/enumerator，为同一字母表的局域 Hamiltonian/HS 搜索准备字典。
+  Tensor-square phase
   已推进到 `3ee7905`：675/675 个 Stage 3 cells 与 180/180 个 Stage 4 pilot
   replicas 完成，最终按预注册统计门停止。
 - 主办方候选仍未全部完成：TN 的文献史排重、超出普通一维开链的新 Hamiltonian、完整

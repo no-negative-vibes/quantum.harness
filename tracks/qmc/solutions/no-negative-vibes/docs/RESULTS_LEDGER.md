@@ -117,8 +117,9 @@ word checks 和 `44,577` 次 exact rational replay。唯一探索命中在深度
   common nonquadratic cone、fermion bag、loop/worldline 或未来机制；
 - 文献首创权仍需最终同行/主办方审查。
 
-当前最新提交 `58961af` 已进入同一共享分支，随后工作只开始编译 exact word operators
-和设计 same-alphabet local HS/Hamiltonian 搜索，尚未交付新的局域结果。
+当前最新提交 `985a55c` 已进入同一共享分支：它完成 252 维数守恒 normal-ordered
+坐标编译器，以及按 transpose 与矩阵重复排重的 exact word-pair ray 枚举器，供
+same-alphabet local HS/Hamiltonian 正权消去搜索使用；尚未交付新的局域结果。
 
 Tensor-square 相图支线也已完成 675/675 粗扫和 Stage 4。最终
 `SURVIVE=0, EXTEND=0, STOP=21` 来自低温自相关导致的统计早停，不是物理 no-go；
